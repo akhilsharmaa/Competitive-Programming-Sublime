@@ -1,0 +1,61 @@
+<snippet>
+<content><![CDATA[
+// by @akhilsharmaa 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define pb           push_back
+#define endl         "\n";  
+#define int          long long int
+#define ff           first 
+#define ss           second 
+
+#define printVt(v)   for(auto&&i:v)cout<<i<<' ';cout<<"\n";
+#define debugVt(v)   for(auto&&i:v)cerr<<i<<' ';cerr<<"\n";
+#define scanVt(v)    for(auto&&i:v)cin >> i;
+#define yesNo(ok)    cout << (ok? "YES": "NO") << endl;
+#define debugln(n)   cerr <<#n<<":"<<n<<endl;
+#define debug(n)     cerr <<#n<<":"<<n<<' ';
+#define pf(n)        cout << n << ' ';
+#define pfln(n)      cout << n << endl;
+
+
+const int MOD = 1e9 + 7;
+
+
+void solve(){ 
+
+    ${2}
+
+}
+
+
+signed main(){
+  
+  cin.tie(NULL);
+  ios_base::sync_with_stdio(false);
+    
+  #ifndef ONLINE_JUDGE
+  // freopen("inputf.in","r",stdin);
+  // freopen("outputf.in","w",stdout);
+  freopen("errorf.in","w",stderr);
+  #endif
+  
+  int t = 1;
+  ${1:cin >> t;}
+  
+  while(t--){
+    solve();
+  }
+
+  return 0;
+}
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>akhilsharmaa</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.c++</scope>
+
+</snippet>
