@@ -1,4 +1,4 @@
-# sublime-setup
+# Sublime SETUP
 - Competitive C++ template snippet of @akhilsharmaa
 - Some auto-completions snippet
 
