@@ -11,15 +11,13 @@ using namespace std;
 #define ff           first 
 #define ss           second 
 
-#define printVt(v)   for(auto&&i:v)cout<<i<<' ';cout<<"\n";
-#define debugVt(v)   for(auto&&i:v)cerr<<i<<' ';cerr<<"\n";
-#define scanVt(v)    for(auto&&i:v)cin >> i;
-#define yesNo(ok)    cout << (ok? "YES": "NO") << endl;
-#define debugln(n)   cerr <<#n<<":"<<n<<endl;
-#define debug(n)     cerr <<#n<<":"<<n<<' ';
-#define pf(n)        cout << n << ' ';
-#define pfln(n)      cout << n << endl;
-
+#define printV(v)     for(auto&&i:v)cout<<i<<' ';cout<<"\n";
+#define debugV(v)     for(auto&&i:v)cerr<<i<<' ';cerr<<"\n";
+#define scanV(v)      for(auto&&i:v)cin >> i;
+#define yN(ok)        cout << (ok? "YES": "NO") << endl;
+#define debugln(n)    cerr <<#n<<":"<<n<<endl;
+#define debug(n)      cerr <<#n<<":"<<n<<' ';
+#define p(n)          cout << n << ' ';
 
 const int MOD = 1e9 + 7;
 
@@ -37,9 +35,9 @@ signed main(){
   ios_base::sync_with_stdio(false);
     
   #ifndef ONLINE_JUDGE
-  // freopen("inputf.in","r",stdin);
-  // freopen("outputf.in","w",stdout);
-  freopen("errorf.in","w",stderr);
+    freopen("inputf.in","r",stdin);
+    freopen("outputf.in","w",stdout);
+    freopen("errorf.in","w",stderr);
   #endif
   
   int t = 1;

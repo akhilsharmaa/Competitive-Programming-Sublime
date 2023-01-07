@@ -6,6 +6,7 @@
 		{"trigger":"vi", "contents": "vector<int> ${1:v}($2);"},
 		{"trigger":"si", "contents": "set<int> ${1:st};"},
 		{"trigger":"mii", "contents": "map<int,int> ${1:mp};"},
-		{"trigger":"mi", "contents": "multiset<int> ${1:mst};"}
+		{"trigger":"mi", "contents": "multiset<int> ${1:mst};"},
+		{"trigger":"cout", "contents": "cout << $1 << ${2:endl};"}
 	]
 }
