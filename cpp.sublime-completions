@@ -2,11 +2,61 @@
 	"scope":"source.c++", 
 	"completions":
 	[
-		{"trigger":"vvi", "contents": "vector<vector<int>>  ${1:vvi}($2 ,($3, vector<int>()));"},
-		{"trigger":"vi", "contents": "vector<int> ${1:v}($2);"},
-		{"trigger":"si", "contents": "set<int> ${1:st};"},
-		{"trigger":"mii", "contents": "map<int,int> ${1:mp};"},
-		{"trigger":"mi", "contents": "multiset<int> ${1:mst};"},
-		{"trigger":"cout", "contents": "cout << $1 << ${2:endl};"}
+		{
+			"trigger":"vvi", 
+			"contents": "vector<vector<int>>  ${1:a}($2 ,($3, vector<int>()));", 
+			"annotation" : "vector<vector<int>>",
+		},
+		
+		{
+			"trigger":"vii", 
+			"contents": "vector<pair<int, int>>  ${1:a}($2);", 
+			"annotation" : "vector<pair<int, int>>"
+		},
+		
+		{	
+			"trigger":"vi", 
+			"contents": "vector<int> ${1:v}($2);",
+			"annotation" : "vector<int>"
+		},
+		
+		{
+			"trigger":"si", 
+			"contents": "set<int> ${1:st};",
+			"annotation" : "set<int>"
+		},
+		
+		
+		{	
+			"trigger":"mii", 
+			"contents": "map<int,int> ${1:mp};",
+			"annotation" : "map<int,int>"
+		},
+		
+		
+		{	
+			"trigger":"msi", 
+			"contents": "map<string,int> ${1:mp};", 
+			"annotation" : "map<string,int>"
+		},
+		
+		
+		{	
+			"trigger":"mi",
+			"contents": "multiset<int> ${1:mst};", 
+			"annotation" : "multiset<int>"
+		},
+		
+		
+		{	
+			"trigger":"cout",
+			"contents": "cout << $1 << \"${2:\\n}\";",
+			"annotation" : "cout << << \"\n\" "
+		}
 	]
 }
+
+
+
+
+
