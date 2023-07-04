@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+const int N = 1007;
+
+vector<int> graph[N];
+vector<bool> visited(N, 0);
+
+
+void dfs(int val){
+	
+	if(visited[val])return;
+	visited[val] = true;
+	
+	for(auto ele: graph[val]){
+		if(visited[ele] == 0){
+			dfs(ele);
+		}
+	}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>dfs</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
