@@ -1,0 +1,15 @@
+[   
+    {
+       "keys": ["alt+1"],
+       "command": "terminus_open",
+       "args" : {
+           "cmd": "bash",
+           "cwd": "${file_path:${folder}}",
+           "panel_name": "Terminus"
+       }
+    },
+    {
+        "keys": ["ctrl+."], 
+        "command": "add_date_time_stamp" 
+    },
+] 

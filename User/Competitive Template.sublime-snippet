@@ -1,9 +1,9 @@
 <snippet>
 <content><![CDATA[
-// by @akhilsharmaa 
+// code by @akhilsharmaa 
 
 #include <bits/stdc++.h>
-using namespace std;
+using namespace std;  
 
 #define pb           push_back
 #define endl         "\n";  
@@ -15,17 +15,26 @@ using namespace std;
 #define debugV(v)     for(auto&&i:v)cerr<<i<<' ';cerr<<"\n";
 #define scanV(v)      for(auto&&i:v)cin >> i;
 #define yN(ok)        cout << (ok? "YES": "NO") << endl;
+#define tF(ok)        cout << (ok? "TRUE": "FALSE") << endl;
 #define debugln(n)    cerr <<#n<<":"<<n<<endl;
 #define debug(n)      cerr <<#n<<":"<<n<<' ';
-#define p(n)          cout << n << ' ';
+#define pln(n)        cout << n << '\n';
+
+#define gcd(a, b)     abs(__gcd(a, b))
+#define lcm(a, b)     (a*b)/gcd(a, b)
+
+#define all(v)        v.begin(), v.end()
+
+
 
 const int MOD = 1e9 + 7;
 
 
 void solve(){ 
 
-    ${2}
 
+    ${2}
+    
 }
 
 
@@ -33,6 +42,8 @@ signed main(){
   
   cin.tie(NULL);
   ios_base::sync_with_stdio(false);
+  
+  int t = 1;
     
   #ifndef ONLINE_JUDGE
     freopen("inputf.in","r",stdin);
@@ -40,15 +51,26 @@ signed main(){
     freopen("errorf.in","w",stderr);
   #endif
   
-  int t = 1;
   ${1:cin >> t;}
   
   while(t--){
     solve();
   }
-
+  
+  
   return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
