@@ -3,7 +3,7 @@
 // code by @akhilsharmaa 
 
 #include <bits/stdc++.h>
-using namespace std;
+using namespace std;  
 
 #define pb           push_back
 #define endl         "\n";  
@@ -11,9 +11,7 @@ using namespace std;
 #define ff           first 
 #define ss           second 
 
-
 #define printV(v)     for(auto&&i:v)cout<<i<<' ';cout<<"\n";
-#define all(v)        v.begin(), v.end()
 #define debugV(v)     for(auto&&i:v)cerr<<i<<' ';cerr<<"\n";
 #define scanV(v)      for(auto&&i:v)cin >> i;
 #define yN(ok)        cout << (ok? "YES": "NO") << endl;
@@ -21,6 +19,10 @@ using namespace std;
 #define debugln(n)    cerr <<#n<<":"<<n<<endl;
 #define debug(n)      cerr <<#n<<":"<<n<<' ';
 #define pln(n)        cout << n << '\n';
+
+#define lcm(a, b)     (a*b)/__gcd(a, b)
+#define all(v)        v.begin(), v.end()
+
 
 
 const int MOD = 1e9 + 7;
