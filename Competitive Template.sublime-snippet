@@ -20,7 +20,9 @@ using namespace std;
 #define debug(n)      cerr <<#n<<":"<<n<<' ';
 #define pln(n)        cout << n << '\n';
 
-#define lcm(a, b)     (a*b)/__gcd(a, b)
+#define gcd(a, b)     abs(__gcd(a, b))
+#define lcm(a, b)     (a*b)/gcd(a, b)
+
 #define all(v)        v.begin(), v.end()
 
 
