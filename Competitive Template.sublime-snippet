@@ -19,9 +19,13 @@ using namespace std;
 #define debugln(n)    cerr <<#n<<":"<<n<<endl;
 #define debug(n)      cerr <<#n<<":"<<n<<' ';
 #define pln(n)        cout << n << '\n';
+#define printMP(mp)   cout << #mp << "-> ";for(auto [i, j]: mp)cout<<i<<':'<<j<<", ";
+#define debugMP(mp)   cerr << #mp << "-> ";for(auto [i, j]: mp)cerr<<i<<':'<<j<<", ";cerr<<"\n";
+
 
 #define gcd(a, b)     abs(__gcd(a, b))
 #define lcm(a, b)     (a*b)/gcd(a, b)
+#define loop(n)       for(int ii = 0; ii < n; ++ ii)
 
 #define all(v)        v.begin(), v.end()
 

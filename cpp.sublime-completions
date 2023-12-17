@@ -20,6 +20,12 @@
 			"annotation" : "vector<int>"
 		},
 		
+		{	
+			"trigger":"vpii", 
+			"contents": "vector<pair<int, int>> ${1:vii}($2);",
+			"annotation" : "vector<pair<int, int>> vii(n)"
+		},
+		
 		{
 			"trigger":"si", 
 			"contents": "set<int> ${1:st};",
