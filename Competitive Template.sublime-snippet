@@ -1,41 +1,39 @@
 <snippet>
 <content><![CDATA[
-// code by @akhilsharmaa 
+// by @akhilsharmaa 
 
 #include <bits/stdc++.h>
 using namespace std;  
 
-#define pb           push_back
-#define endl         "\n";  
-#define int          long long int
-#define ff           first 
-#define ss           second 
+#define pb            push_back
+#define endl          "\n";  
+#define int           long long int
+#define ff            first 
+#define ss            second 
 
 #define printV(v)     for(auto&&i:v)cout<<i<<' ';cout<<"\n";
 #define debugV(v)     for(auto&&i:v)cerr<<i<<' ';cerr<<"\n";
 #define scanV(v)      for(auto&&i:v)cin >> i;
 #define yN(ok)        cout << (ok? "YES": "NO") << endl;
 #define tF(ok)        cout << (ok? "TRUE": "FALSE") << endl;
+
 #define debugln(n)    cerr <<#n<<":"<<n<<endl;
 #define debug(n)      cerr <<#n<<":"<<n<<' ';
 #define pln(n)        cout << n << '\n';
 #define printMP(mp)   cout << #mp << "-> ";for(auto [i, j]: mp)cout<<i<<':'<<j<<", ";
 #define debugMP(mp)   cerr << #mp << "-> ";for(auto [i, j]: mp)cerr<<i<<':'<<j<<", ";cerr<<"\n";
 
-
+#define loop(i,j,n)   for(int i=(j);i<=((int)n);++i)
 #define gcd(a, b)     abs(__gcd(a, b))
 #define lcm(a, b)     (a*b)/gcd(a, b)
-#define loop(n)       for(int ii = 0; ii < n; ++ ii)
-
+#define CLR(v)        memset((v),0,sizeof(v))
 #define all(v)        v.begin(), v.end()
 
-
-
+const int INF = 1e18 + 7;
 const int MOD = 1e9 + 7;
 
 
 void solve(){ 
-
 
     ${2}
     
@@ -64,15 +62,6 @@ signed main(){
   
   return 0;
 }
-
-
-
-
-
-
-
-
-
 
 
 

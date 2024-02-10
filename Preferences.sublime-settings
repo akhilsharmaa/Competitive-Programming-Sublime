@@ -1,5 +1,5 @@
  {
-	"font_size": 15, 
+	"font_size": 12, 
 	"ignored_packages":
 	[
 		"Vintage",
@@ -11,4 +11,6 @@
 	"auto_complete": true,
 	"show_errors_inline": true,
 	"index_files": true,
+	"sublimelinter": false,
+
 }

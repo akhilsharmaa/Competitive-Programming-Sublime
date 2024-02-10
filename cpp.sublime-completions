@@ -129,6 +129,13 @@
 			"annotation" : "is_prime Sieve of Eratosthenes"
 		},
 		
+		
+		{	
+			"trigger":"GP Sum (a, r, n){",
+			"contents": "\nint GP_Sum(int a, int r, int n){\n\t return ((a*binpow(r, n)) - a)/(r-1);\n}",
+			"annotation" : "Sum of GP a^1 + a^2 + a^3 + ... + a^n"
+		},
+		
 		{	
 			"trigger":"binpow Binary-Exponentiation binary power",
 			"contents": "\nlong long binpow(long long a, long long b) { \n\t     long long res = 1; \n\t     while (b > 0) { \n\t \t    if (b & 1) \n\t \t\t        res = res * a; \n\t \t    a = a * a; \n\t \t    b >>= 1; \n\t \t} \n\t     return res; \n}", 
