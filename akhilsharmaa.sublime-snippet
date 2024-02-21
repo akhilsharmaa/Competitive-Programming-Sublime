@@ -63,8 +63,6 @@ signed main(){
   return 0;
 }
 
-
-
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>akhilsharmaa</tabTrigger>
