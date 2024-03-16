@@ -102,6 +102,14 @@
 		},
 		
 		
+		{
+			"trigger":"priority_queue",
+			"contents": "priority_queue<int, vector<int>, ${1:greater<int>}> ${2:pq};", 
+			"annotation" : "Priority Queue",
+		},
+		
+		
+		
 		// ........................Programs....................
 		
 		{	

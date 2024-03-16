@@ -3,13 +3,21 @@
 // by @akhilsharmaa 
 
 #include <bits/stdc++.h>
+
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+
 using namespace std;  
+using namespace __gnu_pbds;
+
+typedef __gnu_pbds::tree<int, __gnu_pbds::null_type, less<int>, __gnu_pbds::rb_tree_tag, __gnu_pbds::tree_order_statistics_node_update> ordered_set;
 
 #define pb            push_back
 #define endl          "\n";  
 #define int           long long int
 #define ff            first 
 #define ss            second 
+
 
 #define printV(v)     for(auto&&i:v)cout<<i<<' ';cout<<"\n";
 #define debugV(v)     for(auto&&i:v)cerr<<i<<' ';cerr<<"\n";
@@ -31,6 +39,7 @@ using namespace std;
 
 const int INF = 1e18 + 7;
 const int MOD = 1e9 + 7;
+const int N = 1e5 + 7;
 
 
 void solve(){ 
