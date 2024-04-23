@@ -3,15 +3,15 @@
 		
 vector<int> getPrefix(vector<int> v, int n){
   
-      vector<int> prefixV(n, 0);
+    vector<int> prefixV(n, 0);
       
-      int prv = 0;
-      for (int i = 0; i < n; ++i){
-          prefixV[i] = prv + v[i];
-          prv = prefixV[i];
-      }
-
-      return prefixV;
+    int prv = 0;
+    for (int i = 0; i < n; ++i){
+        prefixV[i] = prv + v[i];
+        prv = prefixV[i];
+    }
+    
+    return prefixV;
 }
 
 
@@ -19,5 +19,5 @@ vector<int> getPrefix(vector<int> v, int n){
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>template-getPrefix()</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<!-- <scope>source.python</scope> -->
+    <scope>source.c++</scope>
 </snippet>

@@ -36,8 +36,13 @@ typedef __gnu_pbds::tree<int, __gnu_pbds::null_type, less<int>, __gnu_pbds::rb_t
 #define lcm(a, b)     (a*b)/gcd(a, b)
 #define CLR(v)        memset((v),0,sizeof(v))
 #define all(v)        v.begin(), v.end()
+
 #define amax(_x, _y)  _x = max(_x, _y);
 #define amin(_x, _y)  _x = min(_x, _y);
+
+#define add(a, b)    (a + b) % MOD
+#define sub(a, b)    (a - b) % MOD
+#define mul(a, b)    (a * b) % MOD
 
 const int INF = 1e18 + 7;
 const int MOD = 1e9 + 7;
