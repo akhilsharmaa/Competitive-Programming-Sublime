@@ -1,0 +1,23 @@
+
+<snippet>
+	<content><![CDATA[
+		
+int fact[N];
+
+void init_factorial(){
+    fact[0]=1;
+    for(int i=1;i<N;i++){
+        fact[i]= mul(fact[i-1],i);
+    }
+}
+
+init_factorial(); // add this to main function
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>template-factorial()</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.c++</scope>
+  
+</snippet>
+

@@ -1,0 +1,42 @@
+<snippet>
+	<content><![CDATA[
+
+int fact[N];
+
+void init_factorial(){    
+    fact[1]=1;
+    for(int i=2;i<N;i++){
+        fact[i]= mul(fact[i-1],i);
+    }
+}
+
+int binpow(int a, int b){ 
+       int res = 1; 
+       while (b > 0) { 
+           if (b & 1) res = mul(res, a); 
+           a = mul(a, a); 
+           b >>= 1; 
+       } 
+       return res;
+}
+
+int inv(int n){ return binpow(n,MOD-2); }
+int divide(int a, int b){ return mul(a,inv(b));}
+
+
+int nCr(int n, int r){
+  return divide(fact[n],mul(fact[r],fact[n-r]));
+}
+
+int nPr(int n, int r){
+  return divide(fact[n],fact[n-r]);
+}
+
+${1:init_factorial(); //TODO: add this to main function}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>template-combinatorics nCr(n,r), nPr(n,r), inv(n), divide(n) </tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
