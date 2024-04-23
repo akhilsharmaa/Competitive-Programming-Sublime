@@ -8,16 +8,16 @@ Move this file at: ```/Sublime Text/Packages/User/cpp.sublime-completions``` Add
   <img src="https://user-images.githubusercontent.com/74103314/211152845-5c4f82d9-d044-4f76-80a1-f276cb7aad65.gif" width="700" height="400"/>
 </div>
 
-<br>
 
-### My C++ template file - [template.sublime-snippet](https://github.com/akhilsharmaa/Competitive-Programming-SETUP/blob/main/akhilsharmaa.sublime-snippet)
- I suggest to take references from this and **try to create your own template** it will take time but worth.
-    **You can find fancy template** of great coder but it take time to be at that level.
+### My C++ `templates` file : 
 
-<br>
+These are my some *templates(sublime supported)* : 
+- [main() template](./akhilsharmaa.sublime-snippet) - **main()** function, #defines, constants(MOD, N, INF) etc. 
+- [Pow(n, k) template](./binpow.sublime-snippet) - find `n^k` in O(log n) with MOD
+- [Combinatorics template](./combinatorics-arithmetic.sublime-snippet) - includes  **nCr(n,r),  nPr(n, r), inv(), divide(), factorial()...**
+- [dfs() template](./dfs.sublime-snippet) - Graph **Depth** first search algorithm template
+- [factorial() template](./factorial.sublime-snippet) - initilize globally **(N!)** `int fact[N];`for accessing factorial of num. 
+- [isPrime() template](./isPrime-sieveofE.sublime-snippet) - initilize globally  `int isPrime[N];`for accessing `N` is prime or non-prime. using the *sieve of eratosthenes*. 
+- [prefixSum() template](./prefixSum.sublime-snippet) - returns `vector<int>` of prefix of the vector array. 
 
-- [my_base_template](./akhilsharmaa.sublime-snippet) - includes main() function and #defines 
-- 
-
-### C++12 Build for MacOS - [.sublime-build](https://github.com/akhilsharmaa/Competitive-Programming-SETUP/blob/main/C%2B%2B12-Build2.sublime-build)
-Save this file as ```/Sublime Text/Packages/User/C++12.sublime-build``` & change you build system in sublime.
+(I suggest to take references from this and **try to create your own template** it will take time but worth it. )
