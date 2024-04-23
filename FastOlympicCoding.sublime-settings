@@ -1,0 +1,26 @@
+{
+	"run_settings": [
+		{
+			"name": "C++",
+			"extensions": ["cpp"],
+			"compile_cmd": "g++-13 '{source_file}' -o {file_name}",
+			"run_cmd": "./\"{file_name}\" {args} -debug",
+
+			"lint_compile_cmd": "g++ -std=gnu++11 '{source_file}' -I '{source_file_dir}'"
+		},
+
+		{
+			"name": "Python",
+			"extensions": ["py"],
+			"compile_cmd": null,
+			"run_cmd": "python '{source_file}'"
+		},
+		
+		{
+			"name": "Java",
+			"extensions": ["java"],
+			"compile_cmd": "javac -J-Dfile.encoding=utf8 -d \"{source_file_dir}\" \"{source_file}\"",
+			"run_cmd": "java -classpath \"{source_file_dir}\" \"{file_name}\""
+		}
+	],
+}

@@ -17,10 +17,10 @@ typedef __gnu_pbds::tree<int, __gnu_pbds::null_type, less<int>, __gnu_pbds::rb_t
 #define int           long long int
 #define ff            first 
 #define ss            second 
-
+#define FAST_IO       cin.tie(NULL); ios_base::sync_with_stdio(false);
 
 #define printV(v)     for(auto&&i:v)cout<<i<<' ';cout<<"\n";
-#define debugV(v)     for(auto&&i:v)cerr<<i<<' ';cerr<<"\n";
+#define debugV(v)     cerr<<#v<<"-> "; for(auto&&i:v)cerr<<i<<' ';cerr<<"\n";
 #define scanV(v)      for(auto&&i:v)cin >> i;
 #define yN(ok)        cout << (ok? "YES": "NO") << endl;
 #define tF(ok)        cout << (ok? "TRUE": "FALSE") << endl;
@@ -36,13 +36,15 @@ typedef __gnu_pbds::tree<int, __gnu_pbds::null_type, less<int>, __gnu_pbds::rb_t
 #define lcm(a, b)     (a*b)/gcd(a, b)
 #define CLR(v)        memset((v),0,sizeof(v))
 #define all(v)        v.begin(), v.end()
+#define amax(_x, _y)  _x = max(_x, _y);
+#define amin(_x, _y)  _x = min(_x, _y);
 
 const int INF = 1e18 + 7;
 const int MOD = 1e9 + 7;
-const int N = 1e5 + 7;
+const int N =  2e5+7;
 
 
-void solve(){ 
+void solve(int ts, int ttlts){ 
 
     ${2}
     
@@ -51,21 +53,17 @@ void solve(){
 
 signed main(){
   
-  cin.tie(NULL);
-  ios_base::sync_with_stdio(false);
+  FAST_IO; // fast-io
   
   int t = 1;
     
-  #ifndef ONLINE_JUDGE
-    freopen("inputf.in","r",stdin);
-    freopen("outputf.in","w",stdout);
-    freopen("errorf.in","w",stderr);
-  #endif
+  // #ifndef ONLINE_JUDGE
+    ${1:cin >> t;}
+  // #endif
   
-  ${1:cin >> t;}
   
-  while(t--){
-    solve();
+  for(int ts = 1; ts <= t; ts++){
+    solve(ts, t);
   }
   
   
@@ -74,7 +72,7 @@ signed main(){
 
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>akhilsharmaa</tabTrigger>
+  <tabTrigger>template-akhilsharmaa</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.c++</scope>
 

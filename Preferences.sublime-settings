@@ -1,11 +1,11 @@
  {
-	"font_size": 13, 
+	"font_size": 14, 
 	"ignored_packages":
 	[
 		"Vintage",
 	],
 	"save_on_focus_lost": true,
-	"color_scheme": "GitHub Dark Legacy.sublime-color-scheme",
+	"color_scheme": "GitHub Dark.sublime-color-scheme",
 	"trim_automatic_white_space": false,
 	"theme": "Adaptive.sublime-theme",
 	"auto_complete": true,
