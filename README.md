@@ -1,15 +1,11 @@
- # Sublime SETUP - OSX
-
-### Auto completition file [cpp.sublime-completions](https://github.com/akhilsharmaa/Competitive-Programming-SETUP/blob/main/cpp.sublime-completions)
-Move this file at: ```/Sublime Text/Packages/User/cpp.sublime-completions``` Add your own auto-completion snippets. *Easy to add :)*
-
+ ## My Competitve Programming ` C++ Templates ` setup - OSX
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/74103314/211152845-5c4f82d9-d044-4f76-80a1-f276cb7aad65.gif" width="700" height="400"/>
 </div>
 
 
-### My C++ `templates` file : 
+### C++ `templates` file links : 
 
 These are my some *templates(sublime supported)* : 
 - [main() template](./akhilsharmaa.sublime-snippet) - **main()** function, #defines, constants(MOD, N, INF) etc. 
@@ -21,3 +17,6 @@ These are my some *templates(sublime supported)* :
 - [prefixSum() template](./prefixSum.sublime-snippet) - returns `vector<int>` of prefix of the vector array. 
 
 (I suggest to take references from this and **try to create your own template** it will take time but worth it. )
+
+### Auto completition file [cpp.sublime-completions](https://github.com/akhilsharmaa/Competitive-Programming-SETUP/blob/main/cpp.sublime-completions)
+Move this file at: ```/Sublime Text/Packages/User/cpp.sublime-completions``` Add your own auto-completion snippets. *Easy to add :)*
