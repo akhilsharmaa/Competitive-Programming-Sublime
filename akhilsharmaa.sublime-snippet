@@ -32,18 +32,19 @@ typedef __gnu_pbds::tree<int, __gnu_pbds::null_type, less<int>, __gnu_pbds::rb_t
 #define debugMP(mp)   cerr << #mp << "-> ";for(auto [i, j]: mp)cerr<<i<<':'<<j<<", ";cerr<<"\n";
 
 #define loop(i,j,n)   for(int i=(j);i<=((int)n);++i)
-#define gcd(a, b)     abs(__gcd(a, b))
-#define lcm(a, b)     (a*b)/gcd(a, b)
 #define CLR(v)        memset((v),0,sizeof(v))
 #define all(v)        v.begin(), v.end()
 
-#define amax(_x, _y)  _x = max(_x, _y);
-#define amin(_x, _y)  _x = min(_x, _y);
+#define gcd(a, b)     abs(__gcd(a, b))
+#define lcm(a, b)     (a*b)/gcd(a, b)
 
 #define mod(n)       n % MOD
 #define add(a, b)    mod(a) + mod(b) % MOD
 #define sub(a, b)    mod(a) - mod(b) % MOD
 #define mul(a, b)    mod(a) * mod(b) % MOD
+
+#define amax(_x, _y)  _x = max(_x, _y);
+#define amin(_x, _y)  _x = min(_x, _y);
 
 const int INF = 1e18 + 7;
 const int MOD = 1e9 + 7;

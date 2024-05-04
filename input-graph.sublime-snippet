@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+			
+int n; 
+cin >> n;
+      
+for(int i=0; i < n-1; ++i){
+	int x,y; cin >> x >> y; 
+	graph[x].push_back(y);
+	graph[y].push_back(x);
+}
+     
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>input-graph[x].pb(y);</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -36,21 +36,21 @@
 		{	
 			"trigger":"mii", 
 			"contents": "map<int,int> ${1:mp};",
-			"annotation" : "map<int,int>"
+			"annotation" : "map<int,int> mp"
 		},
 		
 		
 		{	
 			"trigger":"msi", 
 			"contents": "map<string,int> ${1:mp};", 
-			"annotation" : "map<string,int>"
+			"annotation" : "map<string,int> mp"
 		},
 		
 		
 		{	
 			"trigger":"mi",
 			"contents": "multiset<int> ${1:mst};", 
-			"annotation" : "multiset<int>"
+			"annotation" : "multiset<int> mst"
 		},
 		
 		
@@ -61,15 +61,15 @@
 		}, 
 		
 		{	
-			"trigger":"maxHeap",
+			"trigger":"maxHeap priority_queue",
 			"contents": "priority_queue <int> maxHeap;",
-			"annotation" : "maxHeap"
+			"annotation" : "priority_queue <int> maxHeap"
 		}, 
 		
 		{	
-			"trigger":"minHeap",
+			"trigger":"minHeap priority_queue",
 			"contents": "priority_queue <int, vector<int>, greater<int> > minHeap;",
-			"annotation" : "minHeap"
+			"annotation" : "priority_queue <int, vector<int>, greater<int> > minHeap;"
 		},
 		
 		{	
@@ -89,9 +89,9 @@
 		},
 		
 		{
-			"trigger":"accumlate sum",
+			"trigger":"sum accumulate(all(v), 0LL);",
 			"contents": "accumulate(${1:v}.begin(), ${1:v}.end(), 0LL);", 
-			"annotation" : "vector<vector<int>>",
+			"annotation" : "accumulate(all(v), 0LL);",
 		},
 		
 		
@@ -108,7 +108,18 @@
 			"annotation" : "Priority Queue",
 		},
 		
+
+		{	
+			"trigger":"sort",
+			"contents": "sort(${1:v}.begin(), ${1:v}.end());", 
+			"annotation" : "sort(v.begin(), v.end());"
+		},
 		
+		{	
+			"trigger":"sort greater<>()",
+			"contents": "sort(${1:v}.begin(), ${1:v}.end(), greater<>());", 
+			"annotation" : "sort(v.begin(), v.end(), greater<>());"
+		},
 		
 		// ........................Programs....................
 		
@@ -142,12 +153,6 @@
 			"trigger":"GP Sum (a, r, n){",
 			"contents": "\nint GP_Sum(int a, int r, int n){\n\t return ((a*binpow(r, n)) - a)/(r-1);\n}",
 			"annotation" : "Sum of GP a^1 + a^2 + a^3 + ... + a^n"
-		},
-		
-		{	
-			"trigger":"binpow Binary-Exponentiation binary power",
-			"contents": "\nlong long binpow(long long a, long long b) { \n\t     long long res = 1; \n\t     while (b > 0) { \n\t \t    if (b & 1) \n\t \t\t        res = res * a; \n\t \t    a = a * a; \n\t \t    b >>= 1; \n\t \t} \n\t     return res; \n}", 
-			"annotation" : "binpow(a, n): O(logN)"
 		},
 	]
 }
