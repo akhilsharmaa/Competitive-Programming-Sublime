@@ -61,6 +61,18 @@
 		}, 
 		
 		{	
+			"trigger":"cerr << a << '\\n';",
+			"contents": "cerr << $1 << \"${2:\\n}\";",
+			"annotation" :"cerr << a << '\\n';"
+		}, 
+		
+		{	
+			"trigger":"cerr << a << ' ';",
+			"contents": "cerr << $1 << ' ';",
+			"annotation" : "cerr << a << ' ' "
+		}, 
+		
+		{	
 			"trigger":"maxHeap priority_queue",
 			"contents": "priority_queue <int> maxHeap;",
 			"annotation" : "priority_queue <int> maxHeap"
@@ -110,16 +122,33 @@
 		
 
 		{	
-			"trigger":"sort",
+			"trigger":"sort(v.begin(), v.end());",
 			"contents": "sort(${1:v}.begin(), ${1:v}.end());", 
-			"annotation" : "sort(v.begin(), v.end());"
+			"annotation" : "sort(v.begin(), v.end();"
 		},
 		
 		{	
-			"trigger":"sort greater<>()",
+			"trigger":"sort(sort(v.begin(), v.end(), greater<>())",
 			"contents": "sort(${1:v}.begin(), ${1:v}.end(), greater<>());", 
-			"annotation" : "sort(v.begin(), v.end(), greater<>());"
+			"annotation" : "sort greater"
 		},
+		
+		{	
+			"trigger":"v.begin(), v.end()",
+			"contents": "${1:v}.begin(), ${1:v}.end()", 
+			"annotation" : "select all"
+		},
+		{	
+			"trigger":"*min_element(v.begin(), v.end())",
+			"contents": "*min_element(${1:v}.begin(), ${1:v}.end())", 
+			"annotation" : "find minimum of all"
+		},
+		{	
+			"trigger":"mst multiset<int> mst",
+			"contents": "multiset<int> ${1:mst};", 
+			"annotation" : "multiset<int> mst"
+		},
+		
 		
 		// ........................Programs....................
 		
@@ -128,7 +157,11 @@
 			"contents": "int n; cin >> n;\nvector<int> v(n);\n\nfor(int i=0; i<n; ++i)\n\tcin >> v[i];",
 			"annotation" : "int n; cin >> n;  vector<int> v(n); for(int i=0; i<n; ++i)\ncin >> v[i];"
 		},
-		
+		{	
+			"trigger":"input-vector",
+			"contents": "int n, ${1:k};; \ncin >> n >> ${1:k};\nvector<int> v(n);\n\nfor(int i=0; i<n; ++i)\n\tcin >> v[i];",
+			"annotation" : "int n, k; cin >> n >> k;  vector<int> v(n); for(int i=0; i<n; ++i)\ncin >> v[i];"
+		},
 		
 		{	
 			"trigger":"binary-search-isPossible int lo",

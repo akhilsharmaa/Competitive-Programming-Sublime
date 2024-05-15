@@ -8,15 +8,17 @@
 ### C++ `templates` file links : 
 
 These are my some *templates(sublime supported)* : 
-- [main() template](./akhilsharmaa.sublime-snippet) - **main()** function, #defines, constants(MOD, N, INF) etc. 
-- [Pow(n, k) template](./binpow.sublime-snippet) - find `n^k` in O(log n) with MOD
-- [Combinatorics template](./combinatorics-arithmetic.sublime-snippet) - includes  **nCr(n,r),  nPr(n, r), inv(), divide(), factorial()...**
-- [dfs() template](./dfs.sublime-snippet) - Graph **Depth** first search algorithm template
-- [factorial() template](./factorial.sublime-snippet) - initilize globally **(N!)** `int fact[N];`for accessing factorial of num. 
-- [isPrime() template](./isPrime-sieveofE.sublime-snippet) - initilize globally  `int isPrime[N];`for accessing `N` is prime or non-prime. using the *sieve of eratosthenes*. 
-- [prefixSum() template](./prefixSum.sublime-snippet) - returns `vector<int>` of prefix of the vector array. 
+- [main()](./akhilsharmaa.sublime-snippet) - **main()** function, #defines, constants(MOD, N, INF) etc. 
+- [Pow(n, k)](./binpow.sublime-snippet) - find `n^k` in O(log n) with MOD
+- [Combinatorics](./combinatorics-arithmetic.sublime-snippet) - includes  **nCr(n,r),  nPr(n, r), inv(), divide(), factorial()...**
+- [factorial()](./factorial.sublime-snippet) - initilize globally **(N!)** `int fact[N];`for accessing factorial of num. 
+- [isPrime()](./isPrime-sieveofE.sublime-snippet) - initilize globally  `int isPrime[N];`for accessing `N` is prime or non-prime. using the *sieve of eratosthenes*. 
+- [prefixSum()](./prefixSum.sublime-snippet) - returns `vector<int>` of prefix of the vector array. 
+### Graph Templetes  
+- [dfs()](./dfs.sublime-snippet) - Graph **Depth** first search algorithm template
+- [isBipartiteDFS()](./isBipartite-DFS.sublime-snippet) - Check whether the graph can divided into bipartite graph 
 
-(I suggest to take references from this and **try to create your own template** it will take time but worth it. )
+( I suggest to take references from this and **try to create your own template** it will take time but worth it. )
 
 ### Auto completition file [cpp.sublime-completions](https://github.com/akhilsharmaa/Competitive-Programming-SETUP/blob/main/cpp.sublime-completions)
 Move this file at: ```/Sublime Text/Packages/User/cpp.sublime-completions``` Add your own auto-completion snippets. *Easy to add :)*

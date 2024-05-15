@@ -34,6 +34,7 @@ typedef __gnu_pbds::tree<int, __gnu_pbds::null_type, less<int>, __gnu_pbds::rb_t
 #define loop(i,j,n)   for(int i=(j);i<=((int)n);++i)
 #define CLR(v)        memset((v),0,sizeof(v))
 #define all(v)        v.begin(), v.end()
+#define sz(v)         v.size()
 
 #define gcd(a, b)     abs(__gcd(a, b))
 #define lcm(a, b)     (a*b)/gcd(a, b)

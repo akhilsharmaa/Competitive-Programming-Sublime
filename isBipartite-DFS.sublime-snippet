@@ -1,0 +1,30 @@
+<snippet>
+	<content><![CDATA[
+		
+vector<int> color(NN, -1);
+
+/*  Returns whether the graph is bipartite or not !!  */
+bool isBipartiteDFS(int val, int col=1){
+  
+  visited[val] = true;
+  color[val] = col;
+  
+  for(auto ele: graph[val]){
+      if(!visited[ele]){
+          if(isBipartiteDFS(ele, col^1) == false)
+                return false; 
+      }else{
+          if(color[val] == color[ele])
+                return false;
+      }
+  }
+  return true;
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>template-isBipartite-dfs()</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.c++</scope>
+  
+</snippet>

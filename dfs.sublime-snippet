@@ -1,13 +1,10 @@
 <snippet>
 	<content><![CDATA[
 		
-// -------------------- DFS ------------------------------------------    
-
 const int NN = 1007;
 
 vector<int> graph[NN];
 vector<bool> visited(NN, 0);
-
 
 void dfs(int val){
   
