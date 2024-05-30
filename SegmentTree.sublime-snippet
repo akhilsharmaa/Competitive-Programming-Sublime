@@ -1,0 +1,52 @@
+<snippet>
+	<content><![CDATA[
+
+class Segment{
+public:
+    
+    vector<int> seg;
+    
+    Segment(vector<int> &a){
+        int n = a.size();
+        seg.resize(4*n);
+        build(a,1,0,n-1);
+    }
+   
+    void build(vector<int> &a, int v, int tl, int tr) {
+      
+        if(tl == tr){
+            seg[v] = a[tl];
+        }else {
+          
+            int tm = (tl+tr)/2;
+            build(a ,(2*v)  , tl,   tm);
+            build(a ,(2*v)+1, tm+1, tr);
+            
+            // Operation On child nodes 
+            seg[v] = seg[(2*v)] + seg[(2*v)+1];
+        }
+    } 
+
+    /* segment.query(1, 0, n-1, le, ri)*/
+    int query(int v, int tl, int tr, int l, int r) {
+        
+        if (l > r) return 0;
+        if (l == tl && r == tr) {
+            return seg[v];
+        }
+
+        int tm = (tl + tr) / 2;
+        
+        return query(v*2, tl, tm, l, min(r, tm))
+           + query(v*2+1, tm+1, tr, max(l, tm+1), r);
+    }    
+};
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>template-segmentTree()</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+</snippet>
+

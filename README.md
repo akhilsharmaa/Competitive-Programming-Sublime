@@ -14,9 +14,11 @@ These are my some *templates(sublime supported)* :
 - [factorial()](./factorial.sublime-snippet) - initilize globally **(N!)** `int fact[N];`for accessing factorial of num. 
 - [isPrime()](./isPrime-sieveofE.sublime-snippet) - initilize globally  `int isPrime[N];`for accessing `N` is prime or non-prime. using the *sieve of eratosthenes*. 
 - [prefixSum()](./prefixSum.sublime-snippet) - returns `vector<int>` of prefix of the vector array. 
-### Graph Templetes  
+
+### Graph/Tree Templetes  
 - [dfs()](./dfs.sublime-snippet) - Graph **Depth** first search algorithm template
 - [isBipartiteDFS()](./isBipartite-DFS.sublime-snippet) - Check whether the graph can divided into bipartite graph 
+- [SegmentTree()](./SegmentTree.sublime-snippet) - implementation of segment tree data-structure 
 
 ( I suggest to take references from this and **try to create your own template** it will take time but worth it. )
 
