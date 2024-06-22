@@ -1,51 +1,90 @@
 <snippet>
 	<content><![CDATA[
 
-class Segment{
-public:
-    
-    vector<int> seg;
-    
-    Segment(vector<int> &a){
-        int n = a.size();
-        seg.resize(4*n);
-        build(a,1,0,n-1);
+class SegmentTree {
+private:
+    vector<int> tree;
+    int n;
+
+    // Utility function to build the tree
+    void buildTree(const vector<int>& arr, int treeIndex, int lo, int hi) {
+        if (lo == hi) {
+            // Leaf node
+            tree[treeIndex] = arr[lo];
+            return;
+        }
+
+        int mid = lo + (hi - lo) / 2;
+        int leftChild = 2 * treeIndex + 1;
+        int rightChild = 2 * treeIndex + 2;
+
+        buildTree(arr, leftChild, lo, mid);
+        buildTree(arr, rightChild, mid + 1, hi);
+
+        tree[treeIndex] = max(tree[leftChild], tree[rightChild]);
     }
-   
-    void build(vector<int> &a, int v, int tl, int tr) {
-      
-        if(tl == tr){
-            seg[v] = a[tl];
-        }else {
-          
-            int tm = (tl+tr)/2;
-            build(a ,(2*v)  , tl,   tm);
-            build(a ,(2*v)+1, tm+1, tr);
-            
-            // Operation On child nodes 
-            seg[v] = seg[(2*v)] + seg[(2*v)+1];
-        }
-    } 
 
-    /* segment.query(1, 0, n-1, le, ri)*/
-    int query(int v, int tl, int tr, int l, int r) {
-        
-        if (l > r) return 0;
-        if (l == tl && r == tr) {
-            return seg[v];
+    // Utility function to update the tree
+    void updateTree(int treeIndex, int lo, int hi, int arrIndex, int value) {
+        if (lo == hi) {
+            tree[treeIndex] = value;
+            return;
         }
 
-        int tm = (tl + tr) / 2;
-        
-        return query(v*2, tl, tm, l, min(r, tm))
-           + query(v*2+1, tm+1, tr, max(l, tm+1), r);
-    }    
+        int mid = lo + (hi - lo) / 2;
+        int leftChild = 2 * treeIndex + 1;
+        int rightChild = 2 * treeIndex + 2;
+
+        if (arrIndex <= mid) {
+            updateTree(leftChild, lo, mid, arrIndex, value);
+        } else {
+            updateTree(rightChild, mid + 1, hi, arrIndex, value);
+        }
+
+        tree[treeIndex] = max(tree[leftChild], tree[rightChild]);
+    }
+
+    // Utility function to query the tree
+    int queryTree(int treeIndex, int lo, int hi, int i, int j) {
+        if (lo > j || hi < i) {
+            return INT_MIN; // Out of range
+        }
+
+        if (i <= lo && hi <= j) {
+            return tree[treeIndex]; // Current segment is completely within range [i, j]
+        }
+
+        int mid = lo + (hi - lo) / 2;
+        int leftChild = 2 * treeIndex + 1;
+        int rightChild = 2 * treeIndex + 2;
+
+        int leftQuery = queryTree(leftChild, lo, mid, i, j);
+        int rightQuery = queryTree(rightChild, mid + 1, hi, i, j);
+
+        return max(leftQuery, rightQuery);
+    }
+
+public:
+    SegmentTree(const vector<int>& arr) {
+        n = arr.size();
+        tree.resize(4 * n);
+        buildTree(arr, 0, 0, n - 1);
+    }
+
+    void update(int index, int value) {
+        updateTree(0, 0, n - 1, index, value);
+    }
+
+    int query(int i, int j) {
+        return queryTree(0, 0, n - 1, i, j);
+    }
 };
+
 
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>template-segmentTree()</tabTrigger>
+	<tabTrigger>template-segmentTree() maxQuery </tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.c++</scope>
 </snippet>

@@ -10,8 +10,8 @@
 		
 		{
 			"trigger":"vii", 
-			"contents": "vector<pair<int, int>>  ${1:a}($2);", 
-			"annotation" : "vector<pair<int, int>>"
+			"contents": "vector<pii>  ${1:a}($2);", 
+			"annotation" : "vector<pii>"
 		},
 		
 		{	
@@ -22,8 +22,8 @@
 		
 		{	
 			"trigger":"vpii", 
-			"contents": "vector<pair<int, int>> ${1:vii}($2);",
-			"annotation" : "vector<pair<int, int>> vii(n)"
+			"contents": "vector<pii> ${1:vii}($2);",
+			"annotation" : "vector<pii> vii(n)"
 		},
 		
 		{
@@ -37,6 +37,12 @@
 			"trigger":"mii", 
 			"contents": "map<int,int> ${1:mp};",
 			"annotation" : "map<int,int> mp"
+		},
+		
+		{	
+			"trigger":"mpii", 
+			"contents": "map<int,pii> ${1:mp};",
+			"annotation" : "map<int,pair<int,int>> mp"
 		},
 		
 		
@@ -85,6 +91,18 @@
 		},
 		
 		{	
+			"trigger":"minHeap priority_queue<pii>",
+			"contents": "priority_queue <pii, vector<pii>, greater<pii>> minHeap;", 
+			"annotation": "priority_queue <pii, vector<pii>, greater<pii>> minHeap;"	
+		},
+		
+		{	
+			"trigger":"maxHeap priority_queue",
+			"contents": "priority_queue <pii> maxHeap;", 
+			"annotation" : "priority_queue <pii> maxHeap;"
+		}, 
+		
+		{	
 			"trigger":"powerOf2",
 			"contents": "\nbool powerOf2(int n){\n  if(n <= 0)return 0;\n  return (n & (n-1)) == 0;\n}",
 			"annotation" : "powerOf2(n)"
@@ -96,8 +114,8 @@
 		},
 		{	
 			"trigger":"pii",
-			"contents": "pair<int, int>",
-			"annotation" : "pair<int, int>"
+			"contents": "pii",
+			"annotation" : "pii"
 		},
 		
 		{

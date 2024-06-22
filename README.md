@@ -13,7 +13,8 @@ These are my some *templates(sublime supported)* :
 - [Combinatorics](./combinatorics-arithmetic.sublime-snippet) - includes  **nCr(n,r),  nPr(n, r), inv(), divide(), factorial()...**
 - [factorial()](./factorial.sublime-snippet) - initilize globally **(N!)** `int fact[N];`for accessing factorial of num. 
 - [isPrime()](./isPrime-sieveofE.sublime-snippet) - initilize globally  `int isPrime[N];`for accessing `N` is prime or non-prime. using the *sieve of eratosthenes*. 
-- [prefixSum()](./prefixSum.sublime-snippet) - returns `vector<int>` of prefix of the vector array. 
+- [prefixSum()](./prefixSum.sublime-snippet) - returns `vector<int>` of prefix of the vector array.
+- [2DmatrixPrefixSum()](./matrixPrefixSum.sublime-snippet) - Build the prefix sum 2D matrix (size of matrix = (n+1) x (m+1))
 
 ### Graph/Tree Templetes  
 - [dfs()](./dfs.sublime-snippet) - Graph **Depth** first search algorithm template

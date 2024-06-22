@@ -18,6 +18,7 @@ typedef __gnu_pbds::tree<int, __gnu_pbds::null_type, less<int>, __gnu_pbds::rb_t
 #define ff            first 
 #define ss            second 
 #define FAST_IO       cin.tie(NULL); ios_base::sync_with_stdio(false);
+#define pii           pair<int, int>
 
 #define printV(v)     for(auto&&i:v)cout<<i<<' ';cout<<"\n";
 #define debugV(v)     cerr<<#v<<"-> "; for(auto&&i:v)cerr<<i<<' ';cerr<<"\n";
@@ -51,6 +52,11 @@ const int INF = 1e18 + 7;
 const int MOD = 1e9 + 7;
 const int N =  2e5+7;
 
+// runs before the solve function 
+void before(){
+    
+}
+
 
 void solve(int ts, int ttlts){ 
 
@@ -65,10 +71,11 @@ signed main(){
   
   int t = 1;
     
-  // #ifndef ONLINE_JUDGE
+  // #ifndef AKHIL
     ${1:cin >> t;}
   // #endif
   
+  before();
   
   for(int ts = 1; ts <= t; ts++){
     solve(ts, t);
