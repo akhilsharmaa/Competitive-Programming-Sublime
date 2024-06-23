@@ -19,6 +19,7 @@ These are my some *templates(sublime supported)* :
 
 ### Intermediate Template
 - [dfs()](./dfs.sublime-snippet) - Graph **Depth** first search algorithm template
+- [Dijkstra()](./DijkstraAlgo.sublime-snippet) - Shortest Path Algorithm using **priority_queue** of STL 
 - [isBipartiteDFS()](./isBipartite-DFS.sublime-snippet) - Check whether the graph can divided into bipartite graph 
 - [SegmentTree()](./SegmentTree.sublime-snippet) - implementation of segment tree data-structure 
 - [SparseTable()](./SparseTable.sublime-snippet) - implementation of Sparse Table (minQuery) data-structure 

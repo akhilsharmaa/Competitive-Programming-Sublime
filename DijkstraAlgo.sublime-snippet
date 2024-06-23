@@ -1,0 +1,68 @@
+<snippet>
+	<content><![CDATA[
+class Graph {
+public:
+
+    Graph(int V) {
+        this->V = V;
+        graph.resize(V); 
+    }
+
+    void addEdge(int u, int v, int weight) {
+        graph[u].push_back({v, weight}); // Add edge to adjacency list of u
+    }
+
+    vector<int> dijkstra(int src) {
+        
+        vector<int> dist(V, INT_MAX), visited(V, 0);
+        dist[src] = 0; // initialize distance from source 
+        
+        for (int count = 0; count < V - 1; count++) { 
+            int u = minDistance(dist, visited); 
+            visited[u] = true;
+            
+            for (auto neighbor : graph[u]) { 
+                int v = neighbor.first;
+                int weight = neighbor.second;
+
+                if (!visited[v] && dist[u] != INT_MAX && dist[u] + weight < dist[v]) {
+                    dist[v] = dist[u] + weight;
+                }
+            }
+        }
+
+        return dist;
+    }
+
+private:
+    
+    int V; 
+    vector<vector<pii>> graph; 
+
+    int minDistance(vector<int> dist, vector<int> visited) {
+        int min = INT_MAX, min_index;
+
+        for (int v = 0; v < V; v++) {
+            if (!visited[v] && dist[v] <= min) {
+                min = dist[v];
+                min_index = v;
+            }
+        }
+
+        return min_index;
+    }
+};
+
+   /*   
+        Graph g(N); -> number of vertices
+        g.addEdge(7, 8, 7); 
+        vector<int> distances = g.dijkstra(0); 
+   */
+
+   
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>templete-Dijkstra()</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
