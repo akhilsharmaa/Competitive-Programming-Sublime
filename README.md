@@ -8,7 +8,7 @@
 ### C++ `templates` file links : 
 
 These are my some *templates(sublime supported)* : 
-### Basic Template
+### Basics
 - [main()](./akhilsharmaa.sublime-snippet) - **main()** function, #defines, constants(MOD, N, INF) etc. 
 - [Pow(n, k)](./binpow.sublime-snippet) - find `n^k` in O(log n) with MOD
 - [Combinatorics](./combinatorics-arithmetic.sublime-snippet) - includes  **nCr(n,r),  nPr(n, r), inv(), divide(), factorial()...**
@@ -17,7 +17,7 @@ These are my some *templates(sublime supported)* :
 - [prefixSum()](./prefixSum.sublime-snippet) - returns `vector<int>` of prefix of the vector array.
 - [2DmatrixPrefixSum()](./matrixPrefixSum.sublime-snippet) - Build the prefix sum 2D matrix (size of matrix = (n+1) x (m+1))
 
-### Intermediate Template
+### Intermediate 
 - [dfs()](./dfs.sublime-snippet) - Graph **Depth** first search algorithm template
 - [Dijkstra()](./DijkstraAlgo.sublime-snippet) - Shortest Path Algorithm using **priority_queue** of STL 
 - [isBipartiteDFS()](./isBipartite-DFS.sublime-snippet) - Check whether the graph can divided into bipartite graph 
