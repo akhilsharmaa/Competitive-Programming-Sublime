@@ -71,14 +71,24 @@ signed main(){
   
   int t = 1;
     
-  // #ifndef AKHIL
+  // #ifndef ONLINE_JUDGE
     ${1:cin >> t;}
   // #endif
   
   before();
   
   for(int ts = 1; ts <= t; ts++){
+  
+    #ifndef ONLINE_JUDGE
+    cerr << "---- #" << ts << " :----\n";
+    #endif
+  
     solve(ts, t);
+    
+    #ifndef ONLINE_JUDGE
+    cerr << "xxxxxxxxxxxxx\n\n";
+    #endif
+    
   }
   
   

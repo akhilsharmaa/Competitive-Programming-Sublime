@@ -1,0 +1,107 @@
+<snippet>
+	<content><![CDATA[
+class Graph {
+public:
+  
+    int V; 
+    vector<vector<pii>> graph; 
+    vector<bool> visited;
+    vector<int> dist; 
+
+    Graph(int V) {
+        this->V = V;
+        graph.resize(V); 
+        visited.resize(V); 
+        dist.resize(V); 
+    }
+
+    
+    /*  [u] --w-> [v] 
+    add a directed edge u to v */
+    void addEdge(int u, int v, int weight) {
+        graph[u].push_back({v, weight}); 
+    }
+    
+    void addEdge(int u, int v) {
+        // By default the weight of a edge will be '1'
+        graph[u].push_back({v, 1}); 
+    }
+    
+    
+    void dfs(int root){
+      
+      if(visited[root])return;
+      visited[root] = true;
+
+      for(auto [ele, weight]: graph[root]){
+          dfs(ele);
+      }
+    }
+    
+    
+    // This DFS will store the distance 
+    void dfs_dist(int root, int initialDis){
+      
+      if(visited[root])return;
+      visited[root] = true;
+      dist[root] = initialDis;
+      
+      for(auto [ele, weight]: graph[root]){
+          dfs_dist(ele, initialDis + 1);
+      }
+    }
+
+    vector<int> dijkstra(int src) {
+        
+        vector<int> dist(V, INT_MAX), visited(V, 0);
+        dist[src] = 0; // initialize distance from source 
+        
+        for (int count = 0; count < V - 1; count++) { 
+            int u = minDistance(dist, visited); 
+            visited[u] = true;
+            
+            for (auto neighbor : graph[u]) { 
+                int v = neighbor.first;
+                int weight = neighbor.second;
+
+                if (!visited[v] && dist[u] != INT_MAX && dist[u] + weight < dist[v]) {
+                    dist[v] = dist[u] + weight;
+                }
+            }
+        }
+
+        return dist;
+    }
+    
+    
+    
+private:
+
+    int minDistance(vector<int> dist, vector<int> visited) {
+        int min = INT_MAX, min_index;
+
+        for (int v = 0; v < V; v++) {
+            if (!visited[v] && dist[v] <= min) {
+                min = dist[v];
+                min_index = v;
+            }
+        }
+
+        return min_index;
+    }
+};
+
+/*   
+    Graph g(N); -> number of vertices
+    g.addEdge(7, 8, 7); 
+    g.addEdge(7, 8); .. by default edge w = 1
+    vector<int> distances = g.dijkstra(0); 
+*/
+
+   
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>templete-Graphs(N)</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

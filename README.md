@@ -17,7 +17,8 @@ These are my some *templates(sublime supported)* :
 - [prefixSum()](./prefixSum.sublime-snippet) - returns `vector<int>` of prefix of the vector array.
 - [2DmatrixPrefixSum()](./matrixPrefixSum.sublime-snippet) - Build the prefix sum 2D matrix (size of matrix = (n+1) x (m+1))
 
-### Intermediate 
+### Good 
+- [Graph()](./graph-all-function.sublime-snippet) - BFS, Dijkstra.. all Graph algo 
 - [dfs()](./dfs.sublime-snippet) - Graph **Depth** first search algorithm template
 - [Dijkstra()](./DijkstraAlgo.sublime-snippet) - Shortest Path Algorithm using **priority_queue** of STL 
 - [isBipartiteDFS()](./isBipartite-DFS.sublime-snippet) - Check whether the graph can divided into bipartite graph 

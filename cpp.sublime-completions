@@ -182,6 +182,18 @@
 		},
 		
 		{	
+			"trigger":"input-matrix",
+			"contents": "int n, m;  \ncin >> n >> m; \nvector<vector<int>>  mat(n, vector<int>(m, 0)); \nfor(int i=0; i < n; ++i){ \n    for (int j = 0; j < m; ++j){ \n        cin >> mat[i][j]; \n    } \n}", 
+    		"annotation" : "int n, m; cin >> n >> m;  vector<vector<int>> mat; for(0-n){for(0-m){}}"
+		},
+		
+		{	
+			"trigger":"input-string-matrix as int-matrix",
+			"contents":"\nint n, m;  \ncin >> n >> m; \n\nvector<vector<int>>  a(n, vector<int>(m, 0)); \n\nfor(int i=0; i < n; ++i){ \n    string s; cin >> s; \n    for (int j = 0; j < m; ++j){ \n        a[i][j] = (s[j])-'0';\n    } \n}", 
+			"annotation" : "cin>>n>>m; for(i->n){ for(j->m){ a[i][j] = (s[j])-'0'; } }"
+		},
+		
+		{	
 			"trigger":"binary-search-isPossible int lo",
 			"contents": "\nint lo = 0, hi = MOD; \n\n \nwhile(lo <= hi){	\n\t      int mid = lo+(hi-lo)/2; \n\t       \n\t      if(isPossible()){ \n\t        hi = mid-1; \n\t         \n\t      }else { \n\t        lo = mid+1; \n\t      } \n\t       \n}",
 			"annotation" : "while(lo <= hi){  int mid = (lo + hi)/2;"
