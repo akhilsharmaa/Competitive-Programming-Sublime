@@ -1,8 +1,16 @@
  ## My Competitve Programming ` C++ Templates ` setup - OSX
+![Badge](https://badges.joonhyung.xyz/codeforces/akhilsharmaa.svg)
+![Badge](https://cp-logo.vercel.app/leetcode/akhilsharmaa)
+
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/74103314/211152845-5c4f82d9-d044-4f76-80a1-f276cb7aad65.gif" width="700" height="400"/>
+<!--   <img src="https://user-images.githubusercontent.com/74103314/211152845-5c4f82d9-d044-4f76-80a1-f276cb7aad65.gif" width="700" height="400"/> -->
 </div>
+
+
+https://github.com/user-attachments/assets/d806caf1-d3e9-48a9-b325-3278bf3f186c
+
+
 
 
 ### C++ `templates` file links : 
