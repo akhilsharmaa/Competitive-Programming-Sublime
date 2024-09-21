@@ -4,5 +4,20 @@
 	
 	"linters": {
 		
+		"g++": {
+	      "args": ["-std=c++17"],
+	      "executable": "g++-14", 
+	      "lint_mode": "background" // Linting mode (e.g., "background", "on_save")
+	    }, 
+	   
+	    "shellcheck": {
+            "styles": [
+                {
+                    "mark_style": "stippled_underline",
+                    "scope": "region.bluish",
+                    "types": ["warning"]
+                }
+            ]
+        }
 	}
 }

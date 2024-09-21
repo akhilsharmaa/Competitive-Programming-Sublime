@@ -6,13 +6,15 @@ public:
     int V; 
     vector<vector<pii>> graph; 
     vector<bool> visited;
-    vector<int> dist; 
+    vector<int> dist, indegree, maxChilds; 
 
     Graph(int V) {
         this->V = V;
         graph.resize(V); 
-        visited.resize(V); 
-        dist.resize(V); 
+        visited.resize(V, 0); 
+        dist.resize(V, 0); 
+        indegree.resize(V, 0); 
+        maxChilds.resize(V, 0); 
     }
 
     
@@ -20,13 +22,19 @@ public:
     add a directed edge u to v */
     void addEdge(int u, int v, int weight) {
         graph[u].push_back({v, weight}); 
+        indegree[v]++;
     }
     
     void addEdge(int u, int v) {
         // By default the weight of a edge will be '1'
         graph[u].push_back({v, 1}); 
+        indegree[v]++;
     }
     
+    
+    void clear(){
+        visited.assign(V, 0);
+    }
     
     void dfs(int root){
       
@@ -50,7 +58,27 @@ public:
           dfs_dist(ele, initialDis + 1);
       }
     }
-
+    
+    /* Graph: Will return Maximum Childs for this node 
+       Works only for directed graph with no cycle  */
+    int dfs_maxChilds(int root){
+      
+      if(visited[root]){
+        return maxChilds[root];
+      }
+      
+      visited[root] = true;
+      
+      int mx = 0;
+      for(auto [ele, weight]: graph[root]){
+          amax(mx, dfs_maxChilds(ele)+1);
+      }
+      
+      maxChilds[root] = mx;
+      return mx;
+    }  
+    
+    
     vector<int> dijkstra(int src) {
         
         vector<int> dist(V, INT_MAX), visited(V, 0);
@@ -75,6 +103,7 @@ public:
     
     
     
+    
 private:
 
     int minDistance(vector<int> dist, vector<int> visited) {
@@ -91,12 +120,15 @@ private:
     }
 };
 
+
 /*   
     Graph g(N); -> number of vertices
     g.addEdge(7, 8, 7); 
     g.addEdge(7, 8); .. by default edge w = 1
+    g.dfs_maxChilds(vertices); will set maxChilds[] to maxChilds below it...
     vector<int> distances = g.dijkstra(0); 
 */
+
 
    
 ]]></content>
