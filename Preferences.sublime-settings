@@ -9,7 +9,9 @@
 	"trim_automatic_white_space": false,
 	"theme": "Adaptive.sublime-theme",
 	"auto_complete": true,
-	"show_errors_inline": false,
+	"show_errors_inline": true,
 	"index_files": true,
 	"sublimelinter": true,
+	"sublimelinter_popup_errors_on_save": true
 }
+
