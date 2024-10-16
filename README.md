@@ -1,6 +1,6 @@
  ## My Competitve Programming ` C++ Templates ` setup - OSX
-![Badge](https://badges.joonhyung.xyz/codeforces/akhilsharmaa.svg)
-![Badge](https://cp-logo.vercel.app/leetcode/akhilsharmaa)
+[![Codeforces](https://badges.riever.dev/codeforces/akhilsharmaa.svg)](https://codeforces.com/profile/akhilsharmaa)
+[![AtCoder](https://badges.riever.dev/atcoder/akhilsharma.svg)](https://atcoder.jp/users/akhilsharma)
 
 
 <div align="center">
